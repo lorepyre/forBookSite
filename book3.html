@@ -1,0 +1,178 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Information</title>
+    <link rel="stylesheet" href="book1.css">
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #E9EFEC;
+    color: #333;
+}
+
+/* Container */
+.container {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 1rem;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* Kitabın və Yazıçının məlumatları */
+.book-info,
+.author-info {
+    flex: 1;
+    min-width: 250px;
+}
+
+.book-image,
+.author-image {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.book-image img,
+.author-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.author-image img {
+    border-radius: 50%;
+    max-width: 200px;
+}
+
+/* Rəy bölməsi */
+.rating-section {
+    width: 100%;
+    max-width: 700px; /* Daha enli */
+    margin-top: 1.5rem;
+    background-color: #E9EFEC; /* Arxa fon */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #16423C; /* Çərçivə rəngi */
+    margin-left: auto;
+    margin-right: auto; /* Ortalanmış */
+}
+
+/* Qeydiyyat və rəy yazma formaları */
+#registration-form,
+#review-form {
+    margin-top: 1rem;
+}
+
+h1, h2, h3, h4 {
+    font-size: 1.4rem;
+    color: #16423C; /* Başlıq rəngi */
+}
+
+/* Qeydiyyat Formu */
+#registration-form input,
+#review-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #6A9C89; /* Kənar rəngi */
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#registration-form button,
+#review-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #6A9C89; /* Düymə fonu */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#registration-form button:hover,
+#review-form button:hover {
+    background-color: #16423C; /* Hover effekti */
+}
+
+#review-form textarea {
+    resize: vertical;
+    min-height: 50px; /* Daha nazik */
+}
+
+/* Rəy yazma formunda başlıq */
+.rating-section h3 {
+    font-size: 1.6rem;
+    color: #16423C; /* Başlıq rəngi */
+}
+
+/* Yazı və başlıqlar */
+h2, p {
+    margin: 10px 0;
+}
+
+/* Rəy formu düyməsi */
+#review-form button {
+    background-color: #6A9C89;
+}
+
+#review-form button:hover {
+    background-color: #16423C;
+}
+
+/* Ümumi stil */
+textarea, input {
+    font-size: 1rem;
+}
+
+/* Başlıqlar və mətn */
+h2, p {
+    margin: 10px 0;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <section class="book-info">
+            <h2>Məhəmməd Əmin Rəsulzadənin "Əsrimizin Siyavuşu" əsəri</h2>
+            <p><strong>Janr:</strong> Publisistik monoqrafiya</p>
+            <p><strong>Nəşr ili:</strong> 1923</p>
+            <p>
+                Məhəmməd Əmin Rəsulzadənin "Əsrimizin Siyavuşu" əsəri Azərbaycan ədəbiyyatında milli ruhun təcəssümü kimi böyük əhəmiyyətə malikdir. Bu əsər, əsasən, Azərbaycan xalqının istiqlaliyyət uğrunda apardığı mübarizəni və milli azadlıq ideyasını əks etdirir. Rəsulzadə burada Firdovsinin "Şahnamə" əsərindəki Siyavuş obrazını müasir dövrün qəhrəmanları ilə əlaqələndirərək, milli azadlıq hərəkatını mənəvi və tarixi aspektdən analiz edir.
+                
+                Əsər tarixi hadisələrdən ilham alaraq yazılmış, Azərbaycan xalqının Rusiya imperiyasına qarşı mübarizəsini simvolik şəkildə təqdim edir. Siyavuş obrazı, əsərdə həm də mübarizə və fədakarlığın təcəssümü kimi çıxış edir. Rəsulzadə bu obraz vasitəsilə Azərbaycan xalqının milli kimliyini qorumaq üçün göstərdiyi iradəni və sarsılmaz ruhunu ön plana çəkir</p>  </section>
+
+        <section class="book-image">
+            <img src="https://www.1001kitab.az/product-images/671bfbbbb13d7.jpg" alt="Book Cover" style="width: 100%; max-width: 300px; border-radius: 8px;">
+        </section>
+
+        <section class="author-info">
+            <h3>Yazıçı haqqında</h3>
+            <h2>Məhəmməd Əmin Rəsulzadə</h2>
+            <p><strong>Məhəmməd Əmin Rəsulzadə (1884–1955)</strong> Azərbaycan xalqının milli-azadlıq hərəkatının liderlərindən biri, Azərbaycan Xalq Cümhuriyyətinin banilərindən və onun ilk parlamentinin rəhbərlərindən biridir. O, həm siyasi, həm də ədəbi sahədə dərin iz buraxmış tarixi şəxsiyyətdir.</p>
+        </section>
+
+        <section class="author-image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Mahammad_Amin_Rasulzade_5.jpg/330px-Mahammad_Amin_Rasulzade_5.jpg" alt="Author Picture" style="width: 100%; max-width: 200px; border-radius: 50%;">
+        </section>
+
+    </div>
+
+
+</body>
+</html>

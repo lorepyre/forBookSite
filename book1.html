@@ -1,0 +1,182 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Information</title>
+    <link rel="stylesheet" href="book1.css">
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #E9EFEC;
+    color: #333;
+}
+
+/* Container */
+.container {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 1rem;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* Kitabın və Yazıçının məlumatları */
+.book-info,
+.author-info {
+    flex: 1;
+    min-width: 250px;
+}
+
+.book-image,
+.author-image {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.book-image img,
+.author-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.author-image img {
+    border-radius: 50%;
+    max-width: 200px;
+}
+
+/* Rəy bölməsi */
+.rating-section {
+    width: 100%;
+    max-width: 700px; /* Daha enli */
+    margin-top: 1.5rem;
+    background-color: #E9EFEC; /* Arxa fon */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #16423C; /* Çərçivə rəngi */
+    margin-left: auto;
+    margin-right: auto; /* Ortalanmış */
+}
+
+/* Qeydiyyat və rəy yazma formaları */
+#registration-form,
+#review-form {
+    margin-top: 1rem;
+}
+
+h1, h2, h3, h4 {
+    font-size: 1.4rem;
+    color: #16423C; /* Başlıq rəngi */
+}
+
+/* Qeydiyyat Formu */
+#registration-form input,
+#review-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #6A9C89; /* Kənar rəngi */
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#registration-form button,
+#review-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #6A9C89; /* Düymə fonu */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#registration-form button:hover,
+#review-form button:hover {
+    background-color: #16423C; /* Hover effekti */
+}
+
+#review-form textarea {
+    resize: vertical;
+    min-height: 50px; /* Daha nazik */
+}
+
+/* Rəy yazma formunda başlıq */
+.rating-section h3 {
+    font-size: 1.6rem;
+    color: #16423C; /* Başlıq rəngi */
+}
+
+/* Yazı və başlıqlar */
+h2, p {
+    margin: 10px 0;
+}
+
+/* Rəy formu düyməsi */
+#review-form button {
+    background-color: #6A9C89;
+}
+
+#review-form button:hover {
+    background-color: #16423C;
+}
+
+/* Ümumi stil */
+textarea, input {
+    font-size: 1rem;
+}
+
+/* Başlıqlar və mətn */
+h2, p {
+    margin: 10px 0;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <section class="book-info">
+            <h2>Hüseyn Cavidin “İblis” pyesi</h2>
+            <p><strong>Janr:</strong> Dram</p>
+            <p><strong>Nəşr ili:</strong> 1924</p>
+            <p>Hüseyn Cavidin **"İblis"** pyesi, Azərbaycan ədəbiyyatının ən mühüm əsərlərindən biridir və 20-ci əsr Azərbaycan dramaturgiyasının zirvələrindən sayılır. Pyes, 1920-ci ildə yazılmış və ilk dəfə 1924-cü ildə səhnələşdirilmişdir. "İblis"də Cavid, metafizik və fəlsəfi məsələləri dərindən araşdırır, insanın mənəvi axtarışları, azad iradə və yaxşılıqla pislik arasındakı mübarizəni ön plana çıxarır.
+
+                Pyesin baş qəhrəmanı olan **İblis** (Şeytan), insanın daxilindəki ziddiyyətləri və daxili mübarizələri təmsil edir. O, yaxşılıq və pislik arasında bir növ vasitəçi rolunu oynayır və insanın daxili dünyasına müdaxilə edir. Cavidin İblisi yalnız bir fövqəltəbii fiqur deyil, həm də ideoloji və fəlsəfi bir obrazdır.
+                
+                Pyesin əsasında, insanlar arasında əxlaqi və mənəvi məsələlər ön planda tutulur. İblis, insanı öz mənəvi azadlığından azad etməyə çalışır, amma nəticədə insanın daxili dünyasındakı azad iradə və məsuliyyət hissi qalır. Pyesdəki əsas ideya, insanların yaxşılıq və pislik arasında seçim etmə azadlığını öz içlərində tapmalarıdır.
+                
+                "İblis" pyesi həm də dövrün cəmiyyəti və mədəniyyəti haqqında mühüm fikir verici məlumatlar təqdim edir. Cavid, pyesində həm cəmiyyəti, həm də insanın daxili dünyasını təhlil edərək insanın mənəvi mübarizəsinin əhəmiyyətini vurğulayır.   </p>
+        </section>
+
+        <section class="book-image">
+            <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1336532251i/13640044.jpg" alt="Book Cover" style="width: 100%; max-width: 300px; border-radius: 8px;">
+        </section>
+
+        <section class="author-info">
+            <h3>Yazıçı haqqında</h3>
+            <h2>Hüseyn Cavid</h2>
+            <p><strong>Hüseyn Cavid (1882-1941)</strong> Azərbaycanın tanınmış yazıçısı, dramaturqu və şairidir. O, XX əsr Azərbaycan ədəbiyyatının ən böyük şəxsiyyətlərindən biri hesab olunur. Cavidin əsərləri dərin fəlsəfi düşüncələr, humanizm, insanın mənəvi inkişafı və idealist baxışlarla zəngindir. Ədəbiyyat sahəsindəki fəaliyyəti ilə yanaşı, Hüseyn Cavid həm də Azərbaycan ədəbiyyatının müasir dövrə keçidini təmsil edən bir şəxsiyyət olmuşdur.</p>
+        </section>
+
+        <section class="author-image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Huseyn_Javid.jpg/375px-Huseyn_Javid.jpg" alt="Author Picture" style="width: 100%; max-width: 200px; border-radius: 50%;">
+        </section>
+
+    </div>
+
+
+</body>
+</html>

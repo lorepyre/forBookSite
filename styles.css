@@ -1,0 +1,735 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #E9EFEC;
+  color: #16423C;
+}
+
+h1, h2, h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+
+header {
+    background-color: #16423C; 
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    width: 100%;
+}
+
+header .logo h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+nav {
+    background-color: #16423C;
+    padding: 15px 20px;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: white ;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #6A9C89;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #16423C;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #6A9C89;
+    transform: scale(1.1);
+}
+
+
+.dropdown-content a:hover::after {
+    content: " →";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.hero h2 {
+    position: relative;
+    z-index: 3;
+}
+
+.show {
+    display: block; 
+}
+
+.search-login {
+    display: flex;
+    align-items: center; 
+    gap: 15px; 
+    
+}
+
+.search-login input {
+    flex: 1; 
+    padding: 10px 15px;
+    border: 1px solid #ccc; 
+    border-radius: 20px; 
+    font-size: 14px; 
+    outline: none; 
+    transition: border-color 0.3s; 
+}
+
+.search-login input:focus {
+    border-color: #6A9C89;
+}
+
+
+
+
+.hero {
+    color: #16423C;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.hero .hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h2 {
+    font-size: 3.5rem;
+    font-weight: 700; 
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.hero .button-explore-books {
+    background-color: #6A9C89;
+    color: white;
+    padding: 15px 35px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-radius: 50px;
+    border: 3px solid #E9EFEC;
+    cursor: pointer;
+    transition: all 0.3s ease, transform 0.3s ease;
+    margin-top: 25px;
+}
+
+.hero .button-explore-books:hover {
+
+    transform: scale(1.1); 
+}
+
+
+
+.featured-books {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #E9EFEC; 
+}
+
+.featured-books .book-carousel {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+
+.featured-books .book {
+    width: 250px; 
+    padding: 20px;
+    background-color: #6A9C89;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.featured-books .book:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.featured-books .book h3 {
+    color: #E9EFEC; 
+}
+
+.featured-books .book img {
+    width: 100%;
+    border-radius: 8px; 
+    
+}
+
+.book-info {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    display: none;
+}
+
+
+.book {
+    border: 1px solid #ddd;
+    margin: 15px;
+    padding: 15px;
+    text-align: center;
+}
+
+.book img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* .review-section {
+    margin-top: 15px;
+}
+
+.review-input {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-review-btn {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-review-btn:hover {
+    background-color: #45a049;
+}
+
+
+.review-list {
+    margin-top: 15px;
+}
+
+.review {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+} */
+
+.search-results {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-results h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.search-results-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+
+
+
+.more { 
+    background-color: #16423C;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px; 
+    border: 3px solid #16423C;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: transform 0.1s ease, background-color 0.3s ease; 
+}
+
+
+.more:hover {
+    transform: scale(1.1); 
+    background-color: #1A5245;
+}
+
+.more:active {
+    transform: scale(0.95); 
+}
+
+
+.about {
+    display: flex;
+    flex-direction: column; 
+
+    align-items: center;
+
+    padding: 40px 20px;
+    background-color: white;
+    border-radius: 15px; 
+
+}
+
+.about h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #16423C;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.about p {
+    font-size: 1.2rem; 
+
+    line-height: 1.8; 
+
+    color: #333; 
+
+    text-align: justify; 
+
+    max-width: 800px;
+
+    margin: 0 auto; 
+
+}
+
+
+.blog {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #E9EFEC; 
+
+}
+
+.blog h2 {
+    font-size: 2.5rem; 
+
+    color: #16423C; 
+
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.blog .blog-post {
+    display: inline-block;
+    width: 45%; 
+
+    margin: 20px 2.5%; 
+
+    background-color: white; 
+
+    border-radius: 10px; 
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+
+}
+
+.blog .blog-post img {
+    width: 100%;
+    border-radius: 8px; 
+
+    margin-bottom: 15px;
+}
+
+.blog .blog-post h3 {
+    font-size: 1.6rem;
+    color: #16423C; 
+
+    margin-bottom: 10px;
+}
+
+.blog .blog-post p {
+    font-size: 1.2rem;
+    color: #555;
+
+    line-height: 1.6;
+}
+
+.blog .blog-post:hover {
+    transform: translateY(-10px); 
+
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+
+.footer {
+    background-color: #16423C;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer-info {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-copyright {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #E9EFEC;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-social li {
+    display: inline-block;
+}
+
+.social-link {
+    color: #E9EFEC;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-link:hover {
+    color: #6A9C89;
+    transform: scale(1.1);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.book-carousel {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.book {
+    flex: 1;
+    max-width: 23%; /* Hər bir kitabın maksimum eni */
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book:hover {
+     transform: scale(1.2); /*Kitabı böyüdür */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Kölgəni daha nəzərə çarpan edir */
+}
+
+.book img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.book:hover img {
+    transform: scale(0.9); /* Şəkili daha çox böyüdür */
+}
+
+.book-title {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0 0;
+    line-height: 1.5;
+}
+
+.see-more { 
+    background-color: #16423C;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px; 
+    border: 3px solid #16423C;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: transform 0.1s ease, background-color 0.3s ease; 
+}
+
+
+.see-more:hover {
+    transform: scale(1.1); 
+    background-color: #1A5245;
+}
+
+.see-more:active {
+    transform: scale(0.95); 
+}
+
+.decorative-image {
+    text-align: center; /* Şəkli mərkəzə düzləşdirir */
+    margin: 20px 0; /* Yuxarı və aşağı boşluq */
+}
+
+.decorative-image img {
+    max-width: 200px; /* Şəkilin maksimum eni */
+    height: auto; /* Ölçülərin nisbətini qoruyur */
+    opacity: 0.8; /* Bir az şəffaflıq əlavə edir */
+}
+/* Book separator style */
+.book-separator {
+    text-align: center;  /* Şəkillərin mərkəzə düzülməsini təmin edir */
+    
+}
+
+.book-separator img {
+    width: 200px;         /* Şəkillərin kiçik ölçüsünü təyin edir */
+    height: auto;        /* Proportional ölçü saxlanır */
+    opacity: 0.7;        /* Şəkillərin şəffaflığını azaldır */
+    margin-top: 10px;    /* Şəkillər ilə kitab arasındakı boşluq */
+}
+
+/* Optional: Adjust the carousel layout */
+.book-carousel {
+    display: flex;
+    align-items: center;
+}
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px; /* Rəsmlər ilə mətn arasında boşluq */
+}
+
+.about img {
+    max-width: 150px; /* Rəsmlərin ölçüsünü tənzimləyin */
+    height: auto;
+}
+
+
+.flower {
+    flex: 0 0 auto; /* Şəkillərin ölçüsünü sabit saxlayır */
+}
+
+.flower img {
+    max-width: 150px; /* Şəkillərin maksimal eni */
+    height: auto; /* Təbii nisbəti saxlayır */
+    display: block;
+}
+
+
+
+.left-flower {
+    margin-right: auto; /* Sol tərəfdə hizalanır */
+}
+.flower {
+    position: absolute;
+    top: 50%; /* Gülün dikey olaraq mərkəzdə olmasını istəyirsinizsə */
+    transform: translateY(-50%);
+    z-index: -1; /* Kontenti örtməməsi üçün */
+}
+
+.left-flower {
+    left: 0; /* Sol tərəfə yerləşdirilir */
+}
+
+.right-flower {
+    right: 0; /* Sağ tərəfə yerləşdirilir */
+}
+
+.search-results {
+    display: none; /* Axtarış nəticələri əvvəlcə görünməz olacaq */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-height: 500px;
+    overflow-y: auto; /* Əgər nəticələr çoxdursa, sürüşdürmə əlavə edəcək */
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-results-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.book-result {
+    width: 200px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.book-result:hover {
+    transform: scale(1.05);
+}
+
+.book-result img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.book-result h3 {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.book-result p {
+    font-size: 14px;
+    color: #666;
+}
+
+
+/* Telefon üçün CSS */
+@media (max-width: 767px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero .button-explore-books {
+        font-size: 1.2rem;
+        padding: 10px 25px;
+    }
+
+    .featured-books .book {
+        max-width: 100%;
+    }
+
+    .blog .blog-post {
+        width: 100%;
+    }
+
+    .search-login {
+        flex-direction: column;
+    }
+
+    .search-login input {
+        width: 100%;
+    }
+
+    .book img {
+        width: 80px;
+    }
+
+    .book-title {
+        font-size: 16px;
+    }
+}

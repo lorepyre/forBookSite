@@ -1,0 +1,107 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Information</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 1rem;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start; /* Align items at the top */
+}
+.book-info {
+    flex: 1;
+    min-width: 250px;
+}
+.book-image {
+    flex: 0 0 300px;
+    text-align: center;
+}
+.book-image img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 190px;
+}
+.author-info {
+    flex: 1;
+    min-width: 250px;
+}
+.author-image {
+    flex: 0 0 200px;
+    text-align: center;
+}
+.author-image img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 50%;
+}
+.rating-section {
+    width: 100%; /* Ensure the rating section takes the full width */
+    margin-top: 2rem; /* Add space between author info and rating */
+}
+.rating-stars {
+    display: flex;
+    gap: 5px;
+}
+.rating-stars span {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.rating-stars span:hover,
+.rating-stars span.active {
+    color: gold;
+}
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <section class="book-info">
+            <h2>Cəlil Məmmədquluzadəninin “Ölülər” pyesi</h2>
+            <p><strong>Janr:</strong> Dram</p>
+            <p><strong>Nəşr ili:</strong> 1909</p>
+            <p>"Ölülər" pyesi, Cəlil Məmmədquluzadənin həm ədəbi, həm də sosial-siyasi baxışlarını əks etdirən bir əsərdir. Pyesin əsas mövzusu cəmiyyətin gerilikdən və ədalətsizlikdən necə əziyyət çəkdiyini, eyni zamanda insanların dərin məkri və riyakarliyini ortaya qoyur.
+                Əsərdəki "ölülər", yalnız fiziki olaraq ölmüş şəxslər deyil, cəmiyyətin mənəvi və əxlaqi baxımdan ölən, amma sosial həyatda "yaşayan" insanları təmsil edir. Məmmədquluzadə burada sosial və mənəvi əxlaqsızlığın və zülmün qarşısında duran insanların itirdiyi azadlıq və insanlıq prinsiplərini vurğulamaq istəyir.
+                Pyesdə "ölülər" və "yaşayanlar" arasındakı fərq bir çox sosial və mənəvi məsələləri təmsil edir. Məmmədquluzadə, insanları yalnız fiziki həyatla qiymətləndirməyin yetərli olmadığını, daha önəmli olanın insanların əxlaqi, mənəvi keyfiyyətləri olduğunu göstərir. Əsərdə yer alan obrazlar, cəmiyyətin geriliyi və ədalətsizliklə mübarizə aparan, amma sosial təzyiqlərə qarşı durmağa çalışan insanları təmsil edir.
+            </p>
+        </section>
+
+        <section class="book-image">
+            <img src="https://mir.az/uploads/posts/2024-05/b40120ee5d_kitablarmiraz-31.webp" alt="Book Cover" style="width: 100%; max-width: 300px; border-radius: 8px;">
+        </section>
+
+        <section class="author-info">
+            <h3>Yazıçı haqqında</h3>
+            <h2>Cəlil Məmmədquluzadə</h2>
+            <p><strong>Cəlil Məmmədquluzadə (1869–1932)</strong> Azərbaycan ədəbiyyatının böyük nümayəndələrindən biri, realist yazıçı, dramaturq, tənqidçi və ictimai xadimdir. O, XIX əsrin sonu və XX əsrin əvvəllərindəki Azərbaycan ədəbiyyatının inkişafına ciddi təsir göstərmişdir. Məmmədquluzadə, həmçinin, Azərbaycanın milli oyanışının və müstəqillik hərəkatının əsas simalarından biri olmuşdur.</p>
+        </section>
+
+        <section class="author-image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Jalil_Mammadguluzadeh%2C_c._1920.jpg/375px-Jalil_Mammadguluzadeh%2C_c._1920.jpg" alt="Author Picture" style="width: 100%; max-width: 200px; border-radius: 50%;">
+        </section>
+
+    </div>
+
+</body>
+</html>

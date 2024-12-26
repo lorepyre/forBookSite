@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Əlaqə - Literature Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact.css">
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Ədəbiyyat Portalı</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Ana səhifə</a></li>
+                <li><a href="more.html">Haqqında</a></li>
+                <li class="dropdown">
+                    <a href="#">Kitablar</a>
+                    <div class="dropdown-content">
+                        <a href="classics.html">Klassik Ədəbiyyat</a>
+                        <a href="modern.html">Müasir Ədəbiyyat</a>
+                        <a href="local-writers.html">Yerli Yazıçılar</a>
+                    </div>
+                </li>
+                <li><a href="blog.html">Bloq</a></li>
+                <li><a href="contact.html">Əlaqə</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-form">
+            <h1>Bizimlə Əlaqə</h1>
+            <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+                <label for="name">Adınız:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">E-poçt ünvanınız:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Mesajınız:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Göndər</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="footer-copyright">© Copyright 2024, All Rights Reserved</p>
+                        <ul class="footer-social">
+                            <li>
+                                <a class="social-link facebook" href="https://www.facebook.com/profile.php?id=61569881330256" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa fa-facebook"></i>
+                                    <span class="sr-only">Facebook</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="social-link twitter" href="https://x.com/juicyboobooo" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa fa-twitter"></i>
+                                    <span class="sr-only">Twitter</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="social-link pinterest" href="https://www.pinterest.com/trkanyusifzad/" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa fa-pinterest"></i>
+                                    <span class="sr-only">Pinterest</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="social-link tumblr" href="https://www.tumblr.com/blog/turkaneponders" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa fa-tumblr"></i>
+                                    <span class="sr-only">Tumblr</span>
+                                </a>
+                            </li>
+  
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

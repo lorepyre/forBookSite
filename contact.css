@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #E9EFEC;
+    color: #16423C;
+    line-height: 1.6; /* Improved line height for readability */
+}
+
+h1, h2, h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+
+header {
+    background-color: #16423C; 
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    width: 100%;
+}
+
+header .logo h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+nav {
+    background-color: #16423C;
+    padding: 15px 20px;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #6A9C89;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #16423C;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #6A9C89;
+    transform: scale(1.1);
+}
+
+.dropdown-content a:hover::after {
+    content: " →";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.hero {
+    color: #16423C;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.hero h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.hero .button-explore-books {
+    background-color: #6A9C89;
+    color: white;
+    padding: 15px 35px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-radius: 50px;
+    border: 3px solid #E9EFEC;
+    cursor: pointer;
+    transition: all 0.3s ease, transform 0.3s ease;
+    margin-top: 25px;
+}
+
+.hero .button-explore-books:hover {
+    transform: scale(1.1);
+}
+
+.featured-books {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #E9EFEC;
+}
+
+.featured-books .book-carousel {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.featured-books .book {
+    width: 250px;
+    padding: 20px;
+    background-color: #6A9C89;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-books .book:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.featured-books .book h3 {
+    color: #E9EFEC;
+}
+
+.featured-books .book img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.book-info {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    display: none;
+}
+
+.search-login {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-login input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.search-login input:focus {
+    border-color: #6A9C89;
+}
+
+.search-results {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-results h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.search-results-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.more {
+    background-color: #16423C;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 3px solid #16423C;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: transform 0.1s ease, background-color 0.3s ease;
+}
+
+.more:hover {
+    transform: scale(1.1);
+    background-color: #1A5245;
+}
+
+.more:active {
+    transform: scale(0.95);
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.about h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #16423C;
+    font-weight: bold;
+    text-align: center;
+}
+
+.about p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+    text-align: justify;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.blog {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #E9EFEC;
+}
+
+.blog h2 {
+    font-size: 2.5rem;
+    color: #16423C;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.blog .blog-post {
+    display: inline-block;
+    width: 45%;
+    margin: 20px 2.5%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog .blog-post img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.blog .blog-post h3 {
+    font-size: 1.6rem;
+    color: #16423C;
+    margin-bottom: 10px;
+}
+
+.blog .blog-post p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.blog .blog-post:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+    background-color: #16423C;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+/* Əsas bədən elementi */
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Əsas məzmun */
+main {
+    flex: 1;
+}
+
+/* Footer */
+.footer {
+    margin-top: auto;
+
+}
+/* Bütün səhifənin dizaynı */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9; /* Daha açıq fon */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Header dizaynı */
+header {
+    background-color: #16423C;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header .logo h1 {
+    margin: 0;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Main (Əsas) bölmə dizaynı */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 40px 15px;
+}
+
+.contact-form {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Kölgə əlavə edirik */
+    border-radius: 8px;
+    padding: 30px;
+    width: 100%;
+    max-width: 600px; /* Maksimum genişlik */
+    box-sizing: border-box;
+}
+
+/* Form elementləri */
+.contact-form label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.contact-form button {
+    background-color: #6A9C89;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.contact-form button:hover {
+    background-color: #6A9C89;
+}
+
+/* Footer dizaynı */
+.footer {
+    margin-top: auto;
+    background-color: #16423C;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Footer sosial media ikonları */
+.footer-social {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-social li {
+    margin: 0 10px;
+}
+
+.footer-social a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.footer-social a:hover {
+    color: #ffcc00;
+}
